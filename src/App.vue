@@ -1,9 +1,7 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
+  <main>
+    <router-view />
+  </main>
 </template>
 
 <style lang="scss">
@@ -15,16 +13,26 @@
   color: #2c3e50;
 }
 
-#nav {
-  padding: 30px;
+html {
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+}
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+*,
+::before,
+::after {
+  background-repeat: no-repeat;
+  box-sizing: inherit;
+}
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+* {
+  padding: 0;
+  margin: 0;
+}
+
+button,
+input {
+  background-color: transparent;
+  border-style: none;
 }
 </style>
